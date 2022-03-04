@@ -2,7 +2,7 @@ package dingtools
 
 import "fmt"
 
-var version string = "v0.1"
+var version string = "v0.2"
 
 // Version 获取当前版本号
 //
