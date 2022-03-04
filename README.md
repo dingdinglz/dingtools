@@ -3,6 +3,8 @@ powerful go tools package
 
 强大的go工具包
 
+## 注意：引用任意包出现import cycle not allowed提示请忽略，go get 会出现，go mod tidy不会出现，可以正常编译
+
 | 包名                         | 用途                   |
 | ---------------------------- | ---------------------- |
 | [dingruntime](./dingruntime) | 获取RunTime相关信息    |
