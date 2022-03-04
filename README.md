@@ -3,10 +3,11 @@ powerful go tools package
 
 强大的go工具包
 
-| 包名                         | 用途                |
-| ---------------------------- | ------------------- |
-| [dingruntime](./dingruntime) | 获取RunTime相关信息 |
-| [dinglog](./dinglog)         | 日志包              |
+| 包名                         | 用途                   |
+| ---------------------------- | ---------------------- |
+| [dingruntime](./dingruntime) | 获取RunTime相关信息    |
+| [dinglog](./dinglog)         | 日志包                 |
+| [dingjson](./dingjson)       | json生成、解析、转换包 |
 
 ## 联系作者
 
