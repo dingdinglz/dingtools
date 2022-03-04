@@ -4,6 +4,8 @@
 go get -u github.com/dingdinglz/dingtools/dingjson
 ```
 
+## 注意：无论是生成还是解析，你都需要通过NewFrom***来生成一个dingjson型的对象。通过操作该对象，可以完成生成，解析，转换等操作
+
 ## 生成一个json
 
 ```go
