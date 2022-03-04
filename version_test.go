@@ -1,7 +1,10 @@
 package dingtools
 
-import "testing"
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func TestVersion(t *testing.T) {
-	Version()
+	assert.Equal(t, Version(), version)
 }
