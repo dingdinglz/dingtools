@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/dingdinglz/dingtools/dingruntime"
 	"github.com/gookit/color"
+	"strconv"
 	"time"
 )
 
@@ -74,8 +75,47 @@ func (l *DingLogger) Debug(Objects ...interface{}) {
 	var outs []interface{}
 	outs = append(outs, timeStr)
 	outs = append(outs, show)
-	dingruntime.GetLocation()
-	outs = append(outs)
+	location, line := dingruntime.GetLocation()
+	outs = append(outs, color.Yellow.Text(location))
+	outs = append(outs, color.Yellow.Text(strconv.Itoa(line)))
+	for _, i := range Objects {
+		outs = append(outs, i)
+	}
+	fmt.Println(outs...)
+}
+
+// Warn 日志-Warn
+func (l *DingLogger) Warn(Objects ...interface{}) {
+	if l.Level > Level_Warn {
+		return
+	}
+	timeStr := time.Now().Format(l.TimeFormat)
+	show := "[" + color.RGB(255, 165, 0).Color().Text("warn") + "]"
+	var outs []interface{}
+	outs = append(outs, timeStr)
+	outs = append(outs, show)
+	location, line := dingruntime.GetLocation()
+	outs = append(outs, color.Yellow.Text(location))
+	outs = append(outs, color.Yellow.Text(strconv.Itoa(line)))
+	for _, i := range Objects {
+		outs = append(outs, i)
+	}
+	fmt.Println(outs...)
+}
+
+// Error 日志-Error
+func (l *DingLogger) Error(Objects ...interface{}) {
+	if l.Level > Level_Error {
+		return
+	}
+	timeStr := time.Now().Format(l.TimeFormat)
+	show := "[" + color.Red.Text("error") + "]"
+	var outs []interface{}
+	outs = append(outs, timeStr)
+	outs = append(outs, show)
+	location, line := dingruntime.GetLocation()
+	outs = append(outs, color.Yellow.Text(location))
+	outs = append(outs, color.Yellow.Text(strconv.Itoa(line)))
 	for _, i := range Objects {
 		outs = append(outs, i)
 	}

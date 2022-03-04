@@ -3,6 +3,7 @@ module github.com/dingdinglz/dingtools/dinglog
 go 1.17
 
 require (
+	github.com/dingdinglz/dingtools/dingruntime v0.0.0-20220304103722-4d666a859bcc
 	github.com/gookit/color v1.5.0
 	github.com/stretchr/testify v1.7.0
 )

@@ -1,5 +1,7 @@
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/dingdinglz/dingtools/dingruntime v0.0.0-20220304103722-4d666a859bcc h1:WhGmNvZfXCWvf04l2WP6AMHmfQXQHs/MFjTaiUJw5A0=
+github.com/dingdinglz/dingtools/dingruntime v0.0.0-20220304103722-4d666a859bcc/go.mod h1:MzH3JWs9GBQxw0yGK9/OusHLSJAmIM5eGbdwmbKXWnM=
 github.com/gookit/color v1.5.0 h1:1Opow3+BWDwqor78DcJkJCIwnkviFi+rrOANki9BUFw=
 github.com/gookit/color v1.5.0/go.mod h1:43aQb+Zerm/BWh2GnrgOQm7ffz7tvQXEKV6BFMl7wAo=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
