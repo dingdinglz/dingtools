@@ -2,6 +2,7 @@ package dinglog
 
 import (
 	"fmt"
+	"github.com/dingdinglz/dingtools/dingruntime"
 	"github.com/gookit/color"
 	"time"
 )
@@ -40,6 +41,13 @@ func (l *DingLogger) SetLevel(level int) {
 	l.Level = level
 }
 
+// SetTimeFormat 设置时间格式
+//
+// 默认格式为：2006-01-02 15:04:05 同time.Format
+func (l *DingLogger) SetTimeFormat(format string) {
+	l.TimeFormat = format
+}
+
 // Info 日志-info
 func (l *DingLogger) Info(Objects ...interface{}) {
 	if l.Level > Level_Info {
@@ -50,6 +58,24 @@ func (l *DingLogger) Info(Objects ...interface{}) {
 	var outs []interface{}
 	outs = append(outs, timeStr)
 	outs = append(outs, show)
+	for _, i := range Objects {
+		outs = append(outs, i)
+	}
+	fmt.Println(outs...)
+}
+
+// Debug 日志-Debug
+func (l *DingLogger) Debug(Objects ...interface{}) {
+	if l.Level > Level_Debug {
+		return
+	}
+	timeStr := time.Now().Format(l.TimeFormat)
+	show := "[" + color.Blue.Text("debug") + "]"
+	var outs []interface{}
+	outs = append(outs, timeStr)
+	outs = append(outs, show)
+	dingruntime.GetLocation()
+	outs = append(outs)
 	for _, i := range Objects {
 		outs = append(outs, i)
 	}
