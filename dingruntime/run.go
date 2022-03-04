@@ -1,9 +1,19 @@
 package dingruntime
 
 import (
+	"github.com/dingdinglz/dingtools/dinglog"
 	"path"
 	"runtime"
 )
+
+const (
+	version string = "v0.1"
+)
+
+func init() {
+	logger := dinglog.NewLogger()
+	logger.Info("dingruntime", "version:", version)
+}
 
 // GetRunFuncName 获取当前的函数名称
 func GetRunFuncName() string {
