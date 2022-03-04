@@ -2,6 +2,7 @@ package dingjson
 
 import (
 	"encoding/json"
+	"github.com/buger/jsonparser"
 	"github.com/dingdinglz/dingtools/dinglog"
 )
 
@@ -50,4 +51,15 @@ func (d *DingJson) ConventToStr() string {
 // GetSrc 返回[]byte类型的json
 func (d *DingJson) GetSrc() []byte {
 	return d.src
+}
+
+// ConventToStruct 将json对象转换为struct类型
+func (d *DingJson) ConventToStruct(v interface{}) error {
+	return json.Unmarshal(d.src, v)
+}
+
+// GetString 取
+func (d *DingJson) GetString(keys ...string) (string, error) {
+	str, err := jsonparser.GetString(d.src, keys...)
+	return str, err
 }
