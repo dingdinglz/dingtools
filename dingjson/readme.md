@@ -53,4 +53,8 @@ json5.ArrayEach(func(jsonin *DingJson) {
 	}, "what")
 ```
 
+## 调用一个api，解析json，下载图片的例子
+
+[随机p站图片下载](./_example)
+
 ## 完整示例请查看json_test.go文件
