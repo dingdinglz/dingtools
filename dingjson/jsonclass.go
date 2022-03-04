@@ -58,8 +58,26 @@ func (d *DingJson) ConventToStruct(v interface{}) error {
 	return json.Unmarshal(d.src, v)
 }
 
-// GetString 取
+// GetString 取-string
 func (d *DingJson) GetString(keys ...string) (string, error) {
 	str, err := jsonparser.GetString(d.src, keys...)
 	return str, err
+}
+
+// GetInt 取-int
+func (d *DingJson) GetInt(keys ...string) (int64, error) {
+	i, err := jsonparser.GetInt(d.src, keys...)
+	return i, err
+}
+
+// Get 取子json
+func (d *DingJson) Get(keys ...string) (*DingJson, error) {
+	get, _, _, err := jsonparser.Get(d.src, keys...)
+	return NewFromBytes(get), err
+}
+
+func (d *DingJson) ArrayEach(eachFunc func(json *DingJson), keys ...string) {
+	jsonparser.ArrayEach(d.src, func(value []byte, dataType jsonparser.ValueType, offset int, err error) {
+		eachFunc(NewFromBytes(value))
+	}, keys...)
 }
