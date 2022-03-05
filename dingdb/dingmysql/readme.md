@@ -17,3 +17,5 @@ go get -u github.com/dingdinglz/dingtools/dingdb/dingmysql
 | 新建数据库        |
 | 删除数据库        |
 | 查看所有数据库    |
+
+## [详细文档](https://pkg.go.dev/github.com/dingdinglz/dingtools/dingdb/dingmysql)
