@@ -21,3 +21,5 @@ go get -u github.com/dingdinglz/dingtools/dinglog
 ![](img/1.png)
 
 ![](img/2.png)
+
+## [详细文档](https://pkg.go.dev/github.com/dingdinglz/dingtools/dinglog)

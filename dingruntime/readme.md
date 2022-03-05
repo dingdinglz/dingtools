@@ -11,3 +11,4 @@ go get -u github.com/dingdinglz/dingtools/dingruntime
 | GetLocation    | 获取当前的文件名和行号 |
 | GetRunFuncName | 获取当前的函数名称     |
 
+## [详细文档](https://pkg.go.dev/github.com/dingdinglz/dingtools/dingruntime)

@@ -58,3 +58,6 @@ json5.ArrayEach(func(jsonin *DingJson) {
 [随机p站图片下载](./_example)
 
 ## 完整示例请查看json_test.go文件
+
+## [详细文档](https://pkg.go.dev/github.com/dingdinglz/dingtools/dingjson)
+
