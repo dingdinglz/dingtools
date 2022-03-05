@@ -3,3 +3,5 @@ dingjson/_example/test.png
 *.exe
 dingdb/dingnuts/testdb/
 dingdb/dingnuts/backup/
+dingdb/dingnuts/_example/testdb/
+dingdb/dingnuts/_example/backup/
