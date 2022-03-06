@@ -6,13 +6,14 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/axgle/mahonia"
-	"github.com/dingdinglz/dingtools/dinglog"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
 	"syscall"
+
+	"github.com/axgle/mahonia"
+	"github.com/dingdinglz/dingtools/dinglog"
 )
 
 const version = "v0.1"
@@ -129,9 +130,11 @@ mysqladmin create ` + name + ` -uroot -p` + pass
 // Mysql_DropDatabase
 // 删除一个数据库
 func Mysql_DropDatabase(name string, pass string) (error, string) {
-	var text_bat string = `@echo off
-mysqladmin drop %s -uroot -p%s -f`
+	var text_bat string = `mysqladmin drop %s -uroot -p%s -f`
 	text_bat = fmt.Sprintf(text_bat, name, pass)
+	text_bat = strings.ReplaceAll(text_bat, "\n", "")
+	text_bat = "@echo off\n" + text_bat
+	fmt.Println(text_bat)
 	Mysql_WriteBat(text_bat)
 	return Mysql_RunBat()
 }
